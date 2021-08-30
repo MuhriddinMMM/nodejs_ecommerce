@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
     const count = await Product.count();
 
     res.render("shop/index", {
-      pageName: "All Products",
+      pageName: "Все продукты",
       products,
       successMsg,
       errorMsg,
@@ -55,7 +55,7 @@ router.get("/search", async (req, res) => {
       title: { $regex: req.query.search, $options: "i" },
     });
     res.render("shop/index", {
-      pageName: "Search Results",
+      pageName: "результаты поиска",
       products,
       successMsg,
       errorMsg,

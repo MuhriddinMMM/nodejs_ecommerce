@@ -35,10 +35,10 @@ const Dashboard = () => {
         alt="dashboard-head"
       />
       <Wrapper>
-        <Title>Welcome to the Admin Panel</Title>
+        <Title>Добро пожаловать в админпанель</Title>
         <Lead>
-          Here you can manage your products and categories as well as view users
-          and their orders.
+          Здесь вы можете управлять своими продуктами и категориями, а также просматривать пользователей
+           и их заказы.
         </Lead>
       </Wrapper>
     </div>

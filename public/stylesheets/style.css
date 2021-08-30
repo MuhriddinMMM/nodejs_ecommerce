@@ -1,5 +1,5 @@
 :root {
-  --dark-blue: #458500;
+  --dark-blue: #dd3333;
   --light-blue: #b9d4db;
   --dark-orange: #e9765b;
   --light-orange: #f2a490;
@@ -474,4 +474,7 @@ footer {
     width: 150px;
     height: 150px;
   }
+}
+.badge-info {
+  background-color: #dd3333;
 }

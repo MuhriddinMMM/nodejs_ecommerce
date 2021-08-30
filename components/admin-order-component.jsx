@@ -103,28 +103,28 @@ const AdminShowOrder = (props) => {
 
   return (
     <div>
-      <Label>Cart Contents:</Label>
+      <Label>В тележке:</Label>
       <Container>
         <Col>
-          <h3>Product Code</h3>
+          <h3>Код продукта</h3>
           {CodesData}
         </Col>
         <Col>
-          <h3>Title</h3>
+          <h3>Заголовок</h3>
           {TitlesData}
         </Col>
         <Col>
-          <h3>Quantity</h3>
+          <h3>Количество</h3>
           {QtysData}
         </Col>
         <Col>
-          <h3>Price</h3>
+          <h3>Цена</h3>
           {PricesData}
         </Col>
       </Container>
       <ContainerBottom>
-        <h4>Total Number of Items: {polCarts["cart.totalQty"]} </h4>
-        <h4>Total Cost: {polCarts["cart.totalCost"]} </h4>
+        <h4>Общее количество предметов: {polCarts["cart.totalQty"]} </h4>
+        <h4>Общая стоимость: {polCarts["cart.totalCost"]} </h4>
       </ContainerBottom>
     </div>
   );

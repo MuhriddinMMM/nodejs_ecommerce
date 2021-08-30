@@ -1,14 +1,13 @@
 {
-  "name": "ecommerce-nodejs-website",
+  "name": "nodejs-website",
   "version": "1.0.0",
   "main": "app.js",
-  "description": "A virtual ecommerce website using Node js, Express js, and Mongoose.",
+  "description": "Node js, Express js, and Mongoose.",
   "scripts": {
-    "start": "node app.js",
-    "server": "nodemon app.js"
+    "start": "nodemon app.js"
   },
-  "author": "Muhriddin ",
-  "license": "MIT",
+  "author": "Muhriddin",
+  "license": "",
   "dependencies": {
     "admin-bro": "^3.2.5",
     "admin-bro-expressjs": "^2.0.5",

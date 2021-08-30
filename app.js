@@ -9,7 +9,7 @@ const session = require("express-session");
 const passport = require("passport");
 const flash = require("connect-flash");
 const Category = require("./models/category");
-const MongoStore = require("connect-mongo")(session);
+var MongoStore = require("connect-mongo")(session);
 const connectDB = require("./config/db");
 
 const app = express();
@@ -63,7 +63,7 @@ app.use(async (req, res, next) => {
 
 // add breadcrumbs
 get_breadcrumbs = function (url) {
-  var rtn = [{ name: "Home", url: "/" }],
+  var rtn = [{ name: "Главный", url: "/" }],
     acc = "", // accumulative url
     arr = url.substring(1).split("/");
 

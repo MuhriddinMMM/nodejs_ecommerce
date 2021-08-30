@@ -6,13 +6,13 @@
       <table class="table text-center">
         <thead>
           <tr >
-            <th>Product</th>
+            <th>Продукт</th>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
-            <th>Quantity</th>
+            <th>Количество</th>
             <th>&nbsp;</th>
-            <th>Total</th>
-            <th>Subtotal</th>
+            <th>Общий</th>
+            <th>Промежуточный итог</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -32,7 +32,7 @@
                 href="/products/<%=product.category.slug%>/<%=product._id%>"
               >
                 <h6 class="text-left"><%= product.title %></h6> 
-                <p class="text-left">Product No: <%= product.productCode %></p>
+                <p class="text-left">Продукт No: <%= product.productCode %></p>
               </div>
               
               </a>
@@ -58,7 +58,7 @@
               <a
                 href="/removeAll/<%=product._id%>"
                 class="btn btn-danger btn-sm button-style-danger"
-                >Remove all</a
+                >Убрать все</a
               >
             </td>
           </tr>
@@ -70,18 +70,18 @@
 <hr>
   <div class="row mt-4 mr-auto">
     <div class="col-md-11 col-sm-12 m-auto">
-      <strong>Total: <%= cart.totalCost %> </strong>
+      <strong>Общий: <%= cart.totalCost %> </strong>
     </div>
   </div>
   <div class="row mt-2 mr-auto">
     <div class="col-md-11 col-sm-12 m-auto">
-      <a href="/checkout" class="btn btn-dark button-style">Checkout</a>
+      <a href="/checkout" class="btn btn-dark button-style">Проверить</a>
     </div>
   </div>
   <% } else { %>
   <div class="row text-center">
     <div class="col-md-9 col-sm-9 m-auto">
-      <h2>No items in the cart</h2>
+      <h2>Корзина пуста</h2>
     </div>
   </div>
 

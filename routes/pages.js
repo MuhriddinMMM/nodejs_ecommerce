@@ -12,21 +12,21 @@ router.use(csrfProtection);
 //GET: display abous us page
 router.get("/about-us", (req, res) => {
   res.render("pages/about-us", {
-    pageName: "About Us",
+    pageName: "О нас",
   });
 });
 
 //GET: display shipping policy page
 router.get("/shipping-policy", (req, res) => {
   res.render("pages/shipping-policy", {
-    pageName: "Shipping Policy",
+    pageName: "Политика доставки",
   });
 });
 
 //GET: display careers page
 router.get("/careers", (req, res) => {
   res.render("pages/careers", {
-    pageName: "Careers",
+    pageName: "Карьера",
   });
 });
 
@@ -35,7 +35,7 @@ router.get("/contact-us", (req, res) => {
   const successMsg = req.flash("success")[0];
   const errorMsg = req.flash("error");
   res.render("pages/contact-us", {
-    pageName: "Contact Us",
+    pageName: "Связаться с нами",
     csrfToken: req.csrfToken(),
     successMsg,
     errorMsg,
@@ -69,10 +69,10 @@ router.post(
       subject: `Enquiry from ${req.body.name}`,
       html: `
       <div>
-      <h2 style="color: #478ba2; text-align:center;">Client's name: ${req.body.name}</h2>
-      <h3 style="color: #478ba2;">Client's email: (${req.body.email})<h3>
+      <h2 style="color: #478ba2; text-align:center;">Имя клиента: ${req.body.name}</h2>
+      <h3 style="color: #478ba2;">Электронная почта клиента: (${req.body.email})<h3>
       </div>
-      <h3 style="color: #478ba2;">Client's message: </h3>
+      <h3 style="color: #478ba2;">Сообщение клиента: </h3>
       <div style="font-size: 30;">
       ${req.body.message}
       </div>
@@ -83,14 +83,14 @@ router.post(
     smtpTrans.sendMail(mailOpts, (error, response) => {
       if (error) {
         req.flash(
-          "error",
-          "An error occured... Please check your internet connection and try again later"
+          "ошибка",
+          "Произошла ошибка ... Проверьте подключение к Интернету и повторите попытку позже."
         );
         return res.redirect("/pages/contact-us");
       } else {
         req.flash(
-          "success",
-          "Email sent successfully! Thanks for your inquiry."
+          "успех",
+          "Письмо успешно отправлено! Благодарим Вас за запрос."
         );
         return res.redirect("/pages/contact-us");
       }

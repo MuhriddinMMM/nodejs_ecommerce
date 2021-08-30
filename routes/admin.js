@@ -15,7 +15,7 @@ const adminBro = new AdminBro({
   databases: [mongoose],
   rootPath: "/admin",
   branding: {
-    companyName: "BestBags",
+    companyName: "EDISON",
     logo: "/images/shop-icon.png",
     softwareBrothers: false,
   },
@@ -24,7 +24,7 @@ const adminBro = new AdminBro({
       resource: Product,
       options: {
         parent: {
-          name: "Admin Content",
+          name: "Контент администратора",
           icon: "InventoryManagement",
         },
         properties: {
@@ -56,7 +56,7 @@ const adminBro = new AdminBro({
       resource: User,
       options: {
         parent: {
-          name: "User Content",
+          name: "Пользовательский контент",
           icon: "User",
         },
         properties: {
@@ -73,7 +73,7 @@ const adminBro = new AdminBro({
       resource: Order,
       options: {
         parent: {
-          name: "User Content",
+          name: "Пользовательский контент",
           icon: "User",
         },
         properties: {
@@ -129,7 +129,7 @@ const adminBro = new AdminBro({
       resource: Category,
       options: {
         parent: {
-          name: "Admin Content",
+          name: "Контент администратора",
           icon: "User",
         },
         properties: {
@@ -149,11 +149,11 @@ const adminBro = new AdminBro({
   locale: {
     translations: {
       labels: {
-        loginWelcome: "Admin Panel Login",
+        loginWelcome: "Вход в панель администратора",
       },
       messages: {
         loginWelcome:
-          "Please enter your credentials to log in and manage your website contents",
+          "Пожалуйста, введите свои учетные данные для входа в систему и управления содержимым вашего сайта",
       },
     },
   },

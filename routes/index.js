@@ -17,7 +17,7 @@ router.get("/", async (req, res) => {
     const products = await Product.find({})
       .sort("-createdAt")
       .populate("category");
-    res.render("shop/home", { pageName: "Home", products });
+    res.render("shop/home", { pageName: "Главный", products });
   } catch (error) {
     console.log(error);
     res.redirect("/");
